@@ -5,7 +5,7 @@
         public AuthenticationResult Register(string firstname, string lastName, string email, string password)
         {
             return new AuthenticationResult(
-                new Guid(),
+                Guid.NewGuid(),
                 firstname,
                 lastName,
                 email,
@@ -15,7 +15,7 @@
         public AuthenticationResult Login(string email, string password)
         {
             return new AuthenticationResult(
-                new Guid(),
+                Guid.NewGuid(), 
                 "firstName",
                 "lastName",
                 email,
