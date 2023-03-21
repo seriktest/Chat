@@ -1,9 +1,11 @@
-using Chat.Application.Services.Authentication;
-using AuthenticationService = Chat.Application.Services.Authentication.AuthenticationService;
+using Chat.Application.Services;
+using Chat.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped<IAuthService, AuthenticationService>();
+builder.Services
+    .AddApplication()
+    .AddInfrastructure();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
