@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Chat.Application.Services.Authentication
 {
-    internal class AuthenticationService : IAuthenticationService
+    public class AuthenticationService : IAuthService
     {
-        public AuthenticationResult Login(string firstname, string lastName, string email, string password)
+        public AuthenticationResult Register(string firstname, string lastName, string email, string password)
         {
             return new AuthenticationResult(
                 new Guid(),
@@ -18,7 +18,7 @@ namespace Chat.Application.Services.Authentication
                 "token");
         }
 
-        public AuthenticationResult Register(string email, string password)
+        public AuthenticationResult Login(string email, string password)
         {
             return new AuthenticationResult(
                 new Guid(),

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Chat.Application.Services.Authentication
 {
-    internal interface IAuthenticationService
+    public interface IAuthService
     {
-        AuthenticationResult Login(string firstname, string lastName,
+        AuthenticationResult Register(string firstname, string lastName,
             string email, string password);
-        AuthenticationResult Register(string email, string password);
+        AuthenticationResult Login(string email, string password);
     }
 }
