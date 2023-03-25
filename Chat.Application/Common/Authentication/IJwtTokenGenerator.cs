@@ -1,6 +1,8 @@
-﻿namespace Chat.Application.Common.Authentication;
+﻿using Chat.Domain.Entities;
+
+namespace Chat.Application.Common.Authentication;
 
 public interface IJwtTokenGenerator
 {
-    string GenerateToken(Guid userId, string firstName, string lastName);
+    string GenerateToken(User user);
 }
