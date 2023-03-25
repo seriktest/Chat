@@ -41,7 +41,7 @@ namespace Chat.Application.Services.Authentication
 
         public AuthenticationResult Login(string email, string password)
         {
-            if (_userRepository.GetUserByEmail(email) is not User user)
+            if (_userRepository.GetUserByEmail(email) is not { } user)
             {
                 throw new Exception("User not exist.");
             }
