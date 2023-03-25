@@ -1,4 +1,5 @@
-﻿using Chat.Application.Services.Authentication;
+﻿using Chat.Api.Filters;
+using Chat.Application.Services.Authentication;
 using Chat.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
